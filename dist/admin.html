@@ -1,0 +1,17 @@
+<html ng-app="site">
+<head>
+	<title>Administration</title>
+</head>
+<body>
+	
+	<div ng-view=""></div>
+	<div ng-controller="listRSVP">
+		<div ng-repeat="attending in server_attending">
+			{{attending | json}}
+		</div>
+	</div>
+
+	<script src="scripts/bf504871.vendor.js"></script>
+    <script src="scripts/rsvp.js"></script>
+</body>
+</html>

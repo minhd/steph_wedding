@@ -1,0 +1,1 @@
+!function(a){a(function(){var b=a("html, body");a("#nav a").click(function(){a("#nav a").parent().removeClass("active"),a(this).parent().addClass("active");var c=a.attr(this,"href");return b.animate({scrollTop:a(c).offset().top},500,function(){window.location.hash=c}),!1}),a(document).on("keydown","#rsvp_form",function(a){13==a.keyCode&&a.preventDefault()})})}(window.jQuery);
