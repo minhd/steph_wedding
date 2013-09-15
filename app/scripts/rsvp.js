@@ -62,7 +62,9 @@ function rsvpCtrl($scope, fbURL, angularFireCollection){
 	}
 
 	$scope.add_rsvp = function(details){
-		var service = angularFireCollection(fbURL);
+		console.log(fbURL);
+		var service = angularFireCollection(new Firebase(fbURL));
+		console.log(service);
 		var result = service.add($scope.attending, function(){
 			$scope.rsvp_id = result.name();
 			$scope.load_existing($scope.rsvp_id);
