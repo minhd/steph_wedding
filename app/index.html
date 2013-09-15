@@ -13,13 +13,16 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+
+        <!-- build:css(.tmp) styles/bootstrap.min.css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- build:css(.tmp) styles/bootstrap-theme.min.css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
-        <!-- libraries -->
+        <!-- build:css(.tmp) styles/flipclock.css -->
         <link rel="stylesheet" href="scripts/lib/flipclock/css/flipclock.css">
 
-        <!-- sass  -->
+        <!-- build:css(.tmp) styles/wedding.css -->
         <link rel="stylesheet" href="styles/wedding.css">
 
         <!-- endbuild -->
@@ -186,18 +189,16 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-        <script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+        
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
+        
+        <script src="bower_components/jquery/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
+        <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <script src="bower_components/angular-fire/angularFire.min.js"></script>
+        
         <!-- libraries -->
         <script src="scripts/lib/flipclock/js/flipclock/libs/prefixfree.min.js"></script>
         <script src="scripts/lib/flipclock/js/flipclock/flipclock.min.js"></script>
