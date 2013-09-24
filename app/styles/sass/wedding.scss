@@ -7,7 +7,7 @@ body{
 
 @font-face{
 	font-family: snellroundhand;
-	src: url(SnellRoundhandScript.ttf);
+	src: url("/assets/SnellRoundhandScript.ttf");
 }
 .navbar{
 	text-transform: uppercase;
@@ -56,12 +56,10 @@ body{
 
 .divider{
 	width:100%;
-	height:30px;
-	/*background: url('divider.jpg');*/
-	img{
-		display:block;
-		margin:0 auto;
-	}
+	height:70px;
+	background-image: url('/assets/images/divider.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
 }
 
 .section-main{
@@ -142,7 +140,7 @@ body{
 
 .flip-clock-wrapper{
 	display:block;
-	margin:0 auto;
+	margin:40px auto;
 }
 
 .flip-clock-wrapper ul{

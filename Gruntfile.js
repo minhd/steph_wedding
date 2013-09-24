@@ -16,7 +16,8 @@ module.exports = function(grunt){
 					src: [
 						'*.{ico, png, txt}',
 						'.htaccess',
-						'*.html'
+						'*.html',
+						'assets/**/*'
 					]
 				}]	
 			}
@@ -81,7 +82,13 @@ module.exports = function(grunt){
 				options:{
 					base:'<%= yeoman.app %>',
 					//keepalive: true,
-					livereload:true
+					// livereload:true
+				}
+			},
+			dist:{
+				options:{
+					base: '<%= yeoman.dist %>',
+					// livereload:true
 				}
 			}
 		},
@@ -110,7 +117,13 @@ module.exports = function(grunt){
 
 	grunt.registerTask('dev', [
 		'connect:dev',
-		'open:dev',
+		'open',
 		'watch:compass'
+	]);
+
+	grunt.registerTask('dist',[
+		'connect:dist',
+		'open',
+		'watch'
 	]);
 }
