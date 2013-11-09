@@ -12,14 +12,14 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/vendor.css">
+        <link rel="stylesheet" href="styles/css/vendor.css">
 
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="styles/css/app.css">
 
         <!--script src="bower_components/modernizr/modernizr.js"></script-->
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" id="nav">
+        <div class="navbar navbar-inverse navbar-fixed-top hide" id="nav">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,8 +32,8 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#rsvp">RSVP</a></li>
-                        <li><a href="#travel">Travel Info</a></li>
-                        <li><a href="#accomondation">Accomondation</a></li>
+                        <li class="hide"><a href="#travel">Travel Info</a></li>
+                        <li class="hide"><a href="#accomondation">Accomondation</a></li>
                         <li><a href="#ceremony">Ceremony</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -114,8 +114,8 @@
             </div>
         </div>
 
-        <div class="divider" id="travel"></div>
-        <div class="container section">
+        <div class="divider hide" id="travel"></div>
+        <div class="container section hide">
             <h1 class="heading">Travel Info</h1>
             <div class="content">
                 <div class="row">
@@ -143,8 +143,8 @@
             </div>
         </div>
 
-        <div class="divider" id="accomondation"></div>
-        <div class="container section">
+        <div class="divider hide" id="accomondation"></div>
+        <div class="container section hide">
             <h1 class="heading">Accomondation</h1>
             <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nesciunt, libero, repellat, placeat debitis esse ducimus excepturi recusandae unde laudantium provident eligendi sed ipsum tempora error est culpa dolorum mollitia!
@@ -179,8 +179,8 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="js/vendor.js"></script>
+        <script src="scripts/vendor.js"></script>
 
-        <script src="js/app.js"></script>
+        <script src="scripts/app.js"></script>
 </body>
 </html>

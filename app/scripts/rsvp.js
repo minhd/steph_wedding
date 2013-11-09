@@ -10,7 +10,7 @@ function router($routeProvider){
 	;
 }
 
-function rsvpCtrl($scope, fbURL, angularFireCollection){
+function rsvpCtrl($scope, fbURL, angularFire, angularFireCollection){
 	$scope.attending = [];
 	$scope.attending['adults'] = [''];
 	$scope.attending['childrens'] = [];
@@ -18,6 +18,13 @@ function rsvpCtrl($scope, fbURL, angularFireCollection){
 	$scope.num_adults = 1;
 	$scope.num_childrens = 0;
 	$scope.rsvp_id = null;
+
+	console.log(fbURL);
+	var ref = new Firebase(fbURL);
+	$scope.attendings = [];
+	angularFire(ref, $scope, 'attendings');
+	console.log($scope.attendings, ref);
+
 
 	// $scope.rsvp_id = '-J2DcFYdrTy4L0Xnxjm1';
 	
@@ -57,22 +64,26 @@ function rsvpCtrl($scope, fbURL, angularFireCollection){
 		});
 		$scope.attending.adults = adults;
 		$scope.attending.childrens = children;
-
-		$scope.add_rsvp($scope.attending);
+		ref.push($scope.attending);
+		$scope.rsvp_id = true;
 	}
 
-	$scope.add_rsvp = function(details){
-		console.log(fbURL);
+	
+	//shit
+	$scope.add_rsvp = function(){
 		var service = angularFireCollection(new Firebase(fbURL));
-		console.log(service);
+		var result = service.add($scope.attending);
+		service.push($scope.attending);
 		var result = service.add($scope.attending, function(){
+			console.log($scope.attending);
+			console.log(result);
 			$scope.rsvp_id = result.name();
-			$scope.load_existing($scope.rsvp_id);
+			// $scope.load_existing($scope.rsvp_id);
 		});
 	}
 
 	$scope.remove_rsvp = function(rsvp_id){
-		var service = new Firebase(fbURL+'-J2DOPyqBo7Jk9g1pRhj');
+		var service = new Firebase(new Firebase(fbURL+'-J2DOPyqBo7Jk9g1pRhj'));
 		service.remove();
 	}
 

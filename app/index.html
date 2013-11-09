@@ -12,20 +12,20 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css css/vendor.css -->
+        <!-- build:css styles/css/vendor.css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="scripts/lib/flipclock/css/flipclock.css">
         <!-- endbuild-->
 
-        <!-- build:css css/app.css -->
+        <!-- build:css styles/css/app.css -->
         <link rel="stylesheet" href="styles/css/wedding.css">
         <!-- endbuild-->
 
         <!--script src="bower_components/modernizr/modernizr.js"></script-->
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" id="nav">
+        <div class="navbar navbar-inverse navbar-fixed-top hide" id="nav">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -38,8 +38,8 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#rsvp">RSVP</a></li>
-                        <li><a href="#travel">Travel Info</a></li>
-                        <li><a href="#accomondation">Accomondation</a></li>
+                        <li class="hide"><a href="#travel">Travel Info</a></li>
+                        <li class="hide"><a href="#accomondation">Accomondation</a></li>
                         <li><a href="#ceremony">Ceremony</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -120,8 +120,8 @@
             </div>
         </div>
 
-        <div class="divider" id="travel"></div>
-        <div class="container section">
+        <div class="divider hide" id="travel"></div>
+        <div class="container section hide">
             <h1 class="heading">Travel Info</h1>
             <div class="content">
                 <div class="row">
@@ -149,8 +149,8 @@
             </div>
         </div>
 
-        <div class="divider" id="accomondation"></div>
-        <div class="container section">
+        <div class="divider hide" id="accomondation"></div>
+        <div class="container section hide">
             <h1 class="heading">Accomondation</h1>
             <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, nesciunt, libero, repellat, placeat debitis esse ducimus excepturi recusandae unde laudantium provident eligendi sed ipsum tempora error est culpa dolorum mollitia!
@@ -185,7 +185,7 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <!-- build:js js/vendor.js -->
+        <!-- build:js scripts/vendor.js -->
         <script src="bower_components/jquery/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
@@ -196,7 +196,7 @@
         <script src="scripts/lib/flipclock/js/flipclock/flipclock.min.js"></script>
         <!-- endbuild -->
 
-        <!-- build:js js/app.js -->
+        <!-- build:js scripts/app.js -->
         <script src="scripts/rsvp.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
