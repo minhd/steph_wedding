@@ -1,4 +1,4 @@
-	<footer>
+	<!-- <footer>
 	  <div class="container">
 		<div class="row">
 		  <div class="col-lg-12 text-center">
@@ -7,13 +7,14 @@
 		</div>
 	  </div>
 	</footer>
-
+ -->
 	<!-- Bootstrap core JavaScript -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="lib/flipclock/js/flipclock/flipclock.min.js"></script>
+	<script src='https://cdn.firebase.com/v0/firebase.js'></script>
 	<script>
 	  // Activates the Carousel
 	  $('.carousel').carousel({
@@ -30,5 +31,6 @@
 	      countdown:true
 	  });
 	</script>
+	<script src="js/scripts.js"></script>
   </body>
 </html>

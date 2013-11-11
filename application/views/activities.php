@@ -6,15 +6,17 @@
 				<hr>
 				<h1 class="intro-text text-center">Activities</h1>
 				<hr>
-				<div class="text-center">
-	                <p><a href="http://www.shangri-la.com/kotakinabalu/rasariaresort/">Shangrila Rasa Ria's Resort</a></p>
-	                <p>Kota Kinabalu</p>
-	                <p>Sunday 20th April 2014</p>
-	                <p>Ceremony: Wedding Pavillion Time: 4:30pm</p>
-	                <p>Reception: Grand Ballroom Time: 7:00pm</p>
-	                <a href="https://maps.google.com.au/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=4573048047906679130&q=Shangri-La%27s+Rasa+Ria+Resort+-+Kota+Kinabalu&iwloc=A&gl=AU&hl=en"><img src="img/map.png" alt=""></a><br/>
-	                <a href="https://maps.google.com.au/maps?expflags=enable_star_based_justifications:true&ie=UTF8&f=d&daddr=Shangri-La%27s+Rasa+Ria+Resort+-+Kota+Kinabalu,+Pantai+Dalit,+Tuaran,+89208+Kota+Kinabalu,+KK,+Malaysia&geocode=CcdmOiZ5c4GxFSrrXQAd7kbsBiFaaUV0-Lp2Pw&gl=AU&hl=en">Directions</a>
-	            </div>
+				<ul>
+					<li>MANUKAN ISLAND &amp; FUN FISHING TRIP</li>
+					<li>KUDAT - THE NORTHERN TIP OF BORNEO</li>
+					<li>SUNSET CRUISE</li>
+					<li>KLIAS WILDLIFE SAFARI RIVER CRUISE - PROBOSCIS MONKEY &amp; FIREFLIES</li>
+					<li>MARI MARI CULTURAL VILLAGE TOUR</li>
+					<li>Islands Hopping with BBQ lunch</li>
+					<li>WHITE WATER RAFTING - PADA</li>
+					<li>KINABALU PARK &amp; PORING HOT SPRING TOUR </li>
+					<li>MANTANANI ISLAND – SNORKELING/DIVING</li>
+				</ul>
 			</div>
 		</div>
 	</div>

@@ -144,7 +144,7 @@ footer p {
   height:200px;
   position:absolute;
   z-index:-999;
-  background: url(../img/top_bg.jpg);
+  background: url(../img/top_bg_purple.jpg);
 }
 
 .header-box{
@@ -162,6 +162,10 @@ footer p {
 
 .navbar-nav>li>a {
   line-height: normal;
+}
+
+.navbar-default .navbar-nav li a{
+  color:white;
 }
 
 .navbar-default .navbar-nav li a:hover{
@@ -220,4 +224,6 @@ a.btn-rsvp{
     border-radius: 15px;
 }
 
+.guest{
+  margin: 5px 0;
 }
