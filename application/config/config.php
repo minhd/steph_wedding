@@ -16,6 +16,10 @@
 */
 $config['base_url']	= 'http://localhost:8888/steph_wedding';
 $config['admin_email'] = 'dekarvn@gmail.com';
+$config['protocol'] = 'sendmail';
+$config['mailpath'] = '/usr/sbin/sendmail';
+$config['charset'] = 'iso-8859-1';
+$config['wordwrap'] = TRUE;
 /*
 |--------------------------------------------------------------------------
 | Index File

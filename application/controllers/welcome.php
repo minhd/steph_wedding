@@ -6,6 +6,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
+	public function test(){
+		$this->load->library('email');
+
+		$this->email->from('your@example.com', 'Your Name');
+		$this->email->to('dekarvn@gmail.com'); 
+
+		$this->email->subject('Email Test');
+		$this->email->message('Testing the email class.');	
+
+		$this->email->send();
+
+		echo $this->email->print_debugger();
+	}
+
 	public function rsvp_submit(){
 		$attending = $this->input->post('attending');
 		$this->load->library('email');
@@ -17,8 +31,9 @@ class Welcome extends CI_Controller {
 
 		$msg = '';
 		foreach($attending['guests'] as $guest){
-			$msg .= '- '.$guest['name'].'<br/>'. ($guest['isChild']? ' - child' : '');
+			$msg .= '- '.$guest['name']. ($guest['isChild']? ' - child' : '') ."\n";
 		}
+		mail('dekarvn@gmail.com', 'A New RSVP', $msg);
 		$msg .='Diet Req: '.$attending['diet'];
 
 		$this->email->message($msg);	

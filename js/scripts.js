@@ -38,7 +38,7 @@ $(document).on('change', '#num_guests', function(){
 		type: 'POST',
 		data: {attending:attending},
 		success: function(data){
-			console.log(data);
+			// console.log(data);
 		}
 	});
 }).on('submit', '#rsvp_form', function(e){
