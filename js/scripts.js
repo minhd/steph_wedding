@@ -28,6 +28,10 @@ $(document).on('change', '#num_guests', function(){
 		attending.guests.push(guest);
 	});
 
+	if($('#optionsRadios1').is(":checked")){
+		attending.attend = true;
+	}attending.attend = false;
+	
 	attending.diet = $('#diet_value').val();
 	var ref = new Firebase('https://steph-wedding.firebaseio.com/attending/');
 	ref.push(attending);

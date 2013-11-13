@@ -82,6 +82,18 @@
 						<div class="line"></div>
 						<a href=""><i class="glyphicon glyphicon"></i></a>
 					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="optionsRadios" id="optionsRadios1" value="attending" checked>
+					    I will be attending
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">
+					    I won't be there
+					  </label>
+					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="form-group">
