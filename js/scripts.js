@@ -37,14 +37,14 @@ $(document).on('change', '#num_guests', function(){
 	ref.push(attending);
 	$('#rsvp_form').hide();
 	$('#ready').show();
-	$.ajax({
-		url:'welcome/rsvp_submit', 
-		type: 'POST',
-		data: {attending:attending},
-		success: function(data){
-			// console.log(data);
-		}
-	});
+	// $.ajax({
+	// 	url:'welcome/rsvp_submit', 
+	// 	type: 'POST',
+	// 	data: {attending:attending},
+	// 	success: function(data){
+	// 		// console.log(data);
+	// 	}
+	// });
 }).on('submit', '#rsvp_form', function(e){
 	e.preventDefault();
 	$('#rsvp_submit').click();
