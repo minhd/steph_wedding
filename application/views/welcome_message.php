@@ -84,13 +84,13 @@
 					</div>
 					<div class="radio">
 					  <label>
-					    <input type="radio" name="optionsRadios" id="optionsRadios1" value="attending" checked>
+					    <input type="radio" name="optionsRadios" id="attending" value="attending" checked>
 					    I will be attending
 					  </label>
 					</div>
 					<div class="radio">
 					  <label>
-					    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">
+					    <input type="radio" name="optionsRadios" id="not_attending" value="not_attending">
 					    I won't be there
 					  </label>
 					</div>

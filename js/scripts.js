@@ -28,11 +28,12 @@ $(document).on('change', '#num_guests', function(){
 		attending.guests.push(guest);
 	});
 
-	if($('#optionsRadios1').is(":checked")){
+	if($("#rsvp_form input[type='radio']:checked").val()=='attending'){
 		attending.attend = true;
-	}attending.attend = false;
+	}else attending.attend = false;
 	
 	attending.diet = $('#diet_value').val();
+
 	var ref = new Firebase('https://steph-wedding.firebaseio.com/attending/');
 	ref.push(attending);
 	$('#rsvp_form').hide();
@@ -53,3 +54,14 @@ $(document).on('change', '#num_guests', function(){
 	$('#ready').hide();
 	$('#rsvp_form').show();
 });
+
+function adminCtrl($scope){
+	$scope.granted = false;
+	$scope.$watch('password', function(){
+		if($scope.password=='abc123') $scope.granted = true;
+	});
+	var ref = new Firebase('https://steph-wedding.firebaseio.com/attending/');
+	ref.on('value', function(snapshot){
+		$scope.attending = snapshot.val();
+	});
+}
