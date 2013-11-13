@@ -45,7 +45,7 @@ if (defined('ENVIRONMENT'))
 			exit('The application environment is not set correctly.');
 	}
 }
-
+require_once('global_config.php');
 /*
  *---------------------------------------------------------------
  * SYSTEM FOLDER NAME
