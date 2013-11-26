@@ -1,2 +1,2 @@
 <?php
-$ENV['base_url'] = 'http://localhost:8888/steph_wedding';
+$ENV['base_url'] = 'http://devl.ands.org.au/workareas/minh/steph_wedding';

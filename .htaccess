@@ -1,7 +1,7 @@
 DirectoryIndex index.php
 
 RewriteEngine on
-RewriteBase /steph_wedding/
+RewriteBase /workareas/minh/steph_wedding/
 
 RewriteRule ^services/ registry/ [R=301,L]
 
