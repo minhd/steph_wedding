@@ -16,44 +16,42 @@ $(document).on('change', '#num_guests', function(){
 
 	e.preventDefault();
 
+	var good = true;
+
 	$('.guest').each(function(){
 		if ($.trim($('input[name=guest]', this).val()) == ""){
 			alert('You have an empty guest name');
+			good = false;
 			return false;
 		}
 	});
 
-	var attending = {
-		guests: [],
-		diet: ''
-	};
-
-	$('.guest').each(function(){
-		var guest = {
-			name: $('input[name=guest]', this).val(),
-			isChild: $('input[name=isChild]',this).is(':checked')
+	if(good){
+		var attending = {
+			guests: [],
+			diet: ''
 		};
-		attending.guests.push(guest);
-	});
 
-	if($("#rsvp_form input[type='radio']:checked").val()=='attending'){
-		attending.attend = true;
-	}else attending.attend = false;
-	
-	attending.diet = $('#diet_value').val();
+		$('.guest').each(function(){
+			var guest = {
+				name: $('input[name=guest]', this).val(),
+				isChild: $('input[name=isChild]',this).is(':checked')
+			};
+			attending.guests.push(guest);
+		});
 
-	var ref = new Firebase('https://steph-wedding.firebaseio.com/attending/');
-	ref.push(attending);
-	$('#rsvp_form').hide();
-	$('#ready').show();
-	// $.ajax({
-	// 	url:'welcome/rsvp_submit', 
-	// 	type: 'POST',
-	// 	data: {attending:attending},
-	// 	success: function(data){
-	// 		// console.log(data);
-	// 	}
-	// });
+		if($("#rsvp_form input[type='radio']:checked").val()=='attending'){
+			attending.attend = true;
+		}else attending.attend = false;
+		
+		attending.diet = $('#diet_value').val();
+
+		var ref = new Firebase('https://steph-wedding.firebaseio.com/attending/');
+		ref.push(attending);
+		$('#rsvp_form').hide();
+		$('#ready').show();
+	}
+
 }).on('submit', '#rsvp_form', function(e){
 	e.preventDefault();
 	$('#rsvp_submit').click();
