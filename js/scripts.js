@@ -15,6 +15,14 @@ $(document).on('change', '#num_guests', function(){
 }).on('click', '#rsvp_submit', function(e){
 
 	e.preventDefault();
+
+	$('.guest').each(function(){
+		if ($.trim($('input[name=guest]', this).val()) == ""){
+			alert('You have an empty guest name');
+			return false;
+		}
+	});
+
 	var attending = {
 		guests: [],
 		diet: ''
